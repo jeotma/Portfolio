@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesús J. Otero Martínez — Software Developer Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="lang-en">
+
+  <!-- Floating Nav -->
+  <nav class="floating-nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">JO</a>
+      <div class="nav-links">
+        <a href="#about">
+          <span class="lang-en">About</span>
+          <span class="lang-es">Sobre mí</span>
+        </a>
+        <a href="#skills">
+          <span class="lang-en">Skills</span>
+          <span class="lang-es">Habilidades</span>
+        </a>
+        <a href="#experience">
+          <span class="lang-en">Experience</span>
+          <span class="lang-es">Experiencia</span>
+        </a>
+        <a href="#projects">Frametric</a>
+        <a href="#recommendations">
+          <span class="lang-en">Recommendations</span>
+          <span class="lang-es">Recomendaciones</span>
+        </a>
+      </div>
+      <div class="nav-actions">
+        <button onclick="toggleLanguage()" class="lang-btn" id="langBtn" title="Toggle Language / Cambiar Idioma">ES</button>
+        <button onclick="window.print()" class="print-btn" title="Download as PDF / Descargar en PDF">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="print-icon">
+            <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+            <path d="M6 14h12v8H6z" />
+          </svg>
+          <span class="lang-en">Print PDF</span>
+          <span class="lang-es">Imprimir PDF</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-gradient"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <p class="hero-subtitle animate-fade-up">
+          <span class="lang-en">Hello World, I am</span>
+          <span class="lang-es">Hola Mundo, soy</span>
+        </p>
+        <h1 class="hero-title animate-fade-up">Jesús J. Otero Martínez</h1>
+        <h2 class="hero-tagline animate-fade-up">
+          <span class="lang-en">Full-Stack Software Developer</span>
+          <span class="lang-es">Desarrollador Junior / Full-Stack</span>
+        </h2>
+        <p class="hero-description animate-fade-up lang-en">
+          Specializing in high-performance **.NET backend APIs** and modular **Angular applications**. Passionate about clean architecture, performance optimization, and robust engineering principles.
+        </p>
+        <p class="hero-description animate-fade-up lang-es">
+          Especializado en **APIs backend en .NET** de alto rendimiento y aplicaciones modulares en **Angular**. Apasionado por la arquitectura limpia, la optimización del rendimiento y los principios de ingeniería robustos.
+        </p>
+        
+        <div class="hero-cta animate-fade-up">
+          <a href="#projects" class="btn btn-primary">
+            <span class="lang-en">Featured Project</span>
+            <span class="lang-es">Proyecto Destacado</span>
+          </a>
+          <a href="#experience" class="btn btn-secondary">
+            <span class="lang-en">My Experience</span>
+            <span class="lang-es">Mi Experiencia</span>
+          </a>
+        </div>
+
+        <div class="contact-links animate-fade-up">
+          <a href="mailto:jesusoteromartinez@outlook.com" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="contact-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            jesusoteromartinez@outlook.com
+          </a>
+          <a href="https://www.linkedin.com/in/jesus-otero-dev" target="_blank" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="contact-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span class="lang-en">LinkedIn Profile</span>
+            <span class="lang-es">Perfil de LinkedIn</span>
+          </a>
+          <span class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="contact-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Málaga, España
+          </span>
+          <span class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="contact-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +34 685 379 960
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="lang-en">About Me</span>
+          <span class="lang-es">Sobre mí</span>
+        </h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="lang-en">
+            I am a competent, organized, and reliable software developer. My professional path is driven by a deep appreciation for architectural patterns and performance optimizations in backend applications. I adapt rapidly to challenging codebases and thrive in demanding environments that value code quality and testing.
+          </p>
+          <p class="lang-es">
+            Soy un profesional competente, organizado y confiable. Mi trayectoria profesional está impulsada por un profundo aprecio por los patrones arquitectónicos y las optimizaciones de rendimiento en aplicaciones backend. Me adapto rápidamente a bases de código desafiantes y prospero en entornos exigentes que valoran la calidad del código y las pruebas.
+          </p>
+          <p class="lang-en">
+            During my professional internships, I developed critical features for high-traffic core APIs, built integrated full-stack applications combining Angular with .NET architectures, and optimized application monitoring systems within Microsoft Azure. Working inside centralized platform teams, I specialized in service performance—notably migrating heavy database queries to micro-ORMs (Dapper) to resolve system bottlenecks. I apply this exact same architectural rigor to my own independent projects, ensuring all implementations are fully covered by automated testing frameworks and follow strict decoupled boundaries.
+          </p>
+          <p class="lang-es">
+            Durante mis prácticas profesionales, desarrollé funcionalidades críticas para APIs principales de alto tráfico, construí aplicaciones full-stack integrando Angular con arquitecturas .NET y optimicé sistemas de monitorización de aplicaciones en Microsoft Azure. Trabajando en equipos de plataforma centralizada, me especialicé en el rendimiento de servicios, destacando la migración de consultas de bases de datos pesadas a micro-ORMs (Dapper) para resolver cuellos de botella del sistema. Aplico exactamente este mismo rigor arquitectónico a mis propios proyectos independientes, asegurando que todas las implementaciones estén completamente cubiertas por marcos de pruebas automatizadas y sigan límites estrictamente desacoplados.
+          </p>
+        </div>
+        <div class="about-metadata">
+          <div class="meta-card">
+            <h3>
+              <span class="lang-en">Languages</span>
+              <span class="lang-es">Idiomas</span>
+            </h3>
+            <ul>
+              <li><strong>Spanish / Español:</strong> <span class="lang-en">Native</span><span class="lang-es">Nativo</span></li>
+              <li><strong>English / Inglés:</strong> C1 (<span class="lang-en">Advanced</span><span class="lang-es">Avanzado</span>)</li>
+            </ul>
+          </div>
+          <div class="meta-card">
+            <h3>
+              <span class="lang-en">Education</span>
+              <span class="lang-es">Educación</span>
+            </h3>
+            <p class="lang-en"><strong>Higher Technician Diploma in Cross-Platform Application Development</strong></p>
+            <p class="lang-es"><strong>Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</strong></p>
+            <p class="school-name">IES Portada Alta, Málaga</p>
+            <span class="date-badge">
+              <span class="lang-en">Sept 2023 - Present</span>
+              <span class="lang-es">Septiembre 2023 - Actualidad</span>
+            </span>
+          </div>
+        </div>
+    <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="lang-en">Professional Skills</span>
+          <span class="lang-es">Competencias Profesionales</span>
+        </h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category-card">
+          <div class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><polygon points="6 2 18 2 18 6 6 6"/><rect x="3" y="6" width="18" height="16" rx="2"/><line x1="10" y1="12" x2="14" y2="12"/><line x1="10" y1="16" x2="14" y2="16"/></svg>
+          </div>
+          <h3>
+            <span class="lang-en">Backend Core</span>
+            <span class="lang-es">Desarrollo Backend</span>
+          </h3>
+          <div class="skills-list">
+            <span class="skill-chip">C#</span>
+            <span class="skill-chip">.NET 9</span>
+            <span class="skill-chip">ASP.NET Core</span>
+            <span class="skill-chip">REST APIs</span>
+            <span class="skill-chip">OpenFGA (Authz)</span>
+            <span class="skill-chip">MediatR (CQRS)</span>
+            <span class="skill-chip">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg>
+          </div>
+          <h3>
+            <span class="lang-en">Data & Infrastructure</span>
+            <span class="lang-es">Datos e Infraestructura</span>
+          </h3>
+          <div class="skills-list">
+            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">Dapper (Micro-ORM)</span>
+            <span class="skill-chip">Entity Framework Core</span>
+            <span class="skill-chip">SQL Tuning</span>
+            <span class="skill-chip">XML / JSON</span>
+            <span class="skill-chip">Git / Version Control</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><code class="code"/><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3>
+            <span class="lang-en">Frontend & Diagnostics</span>
+            <span class="lang-es">Frontend y Diagnóstico</span>
+          </h3>
+          <div class="skills-list">
+            <span class="skill-chip">Angular 19</span>
+            <span class="skill-chip">TypeScript</span>
+            <span class="skill-chip">HTML5 / SCSS</span>
+            <span class="skill-chip">Playwright (E2E)</span>
+            <span class="skill-chip">Vitest / xUnit</span>
+            <span class="skill-chip">
+              <span class="lang-en">Hardware Maintenance</span>
+              <span class="lang-es">Mantenimiento de Equipos</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="lang-en">Professional Experience</span>
+          <span class="lang-es">Experiencia Laboral</span>
+        </h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <h3>
+              <span class="lang-en">Backend Developer (Internship)</span>
+              <span class="lang-es">Desarrollador Backend (Prácticas)</span>
+            </h3>
+            <span class="company-name">Embrace-It</span>
+            <span class="timeline-date">
+              <span class="lang-en">March 2026 - May 2026</span>
+              <span class="lang-es">Marzo 2026 - Mayo 2026</span>
+            </span>
+          </div>
+          <div class="timeline-content lang-en">
+            <p>
+              Contributed within a core engineering team developing and maintaining critical backend APIs consumed by multiple corporate applications.
+            </p>
+            <ul>
+              <li><strong>Performance Optimization:</strong> Spearheaded the migration of complex read queries from Entity Framework Core to Dapper, resolving database latency bottlenecks.</li>
+              <li><strong>Cloud Optimization:</strong> Investigated and optimized monitoring services and database configurations inside Microsoft Azure.</li>
+              <li><strong>API Development:</strong> Collaborated on C# projects using REST API-driven architectures following clean architecture guidelines.</li>
+              <li><strong>Dev Workflows:</strong> Fully immersed in strict Git version control, mandatory pull requests, and peer code reviews.</li>
+            </ul>
+          </div>
+          <div class="timeline-content lang-es">
+            <p>
+              Participación en el desarrollo y mantenimiento de soluciones backend dentro de un equipo vital para la empresa.
+            </p>
+            <ul>
+              <li><strong>Optimización de Rendimiento:</strong> Lideré la migración de consultas de lectura complejas de Entity Framework Core a Dapper, resolviendo cuellos de botella de latencia de base de datos.</li>
+              <li><strong>Optimización Cloud:</strong> Investigué y optimicé los servicios de monitorización y configuraciones de base de datos en Microsoft Azure.</li>
+              <li><strong>Desarrollo de APIs:</strong> Colaboración en proyectos .NET trabajando con arquitecturas orientadas a APIs y servicios siguiendo guías de arquitectura limpia.</li>
+              <li><strong>Flujos de Trabajo:</strong> Uso de flujo de trabajo colaborativo con control de versiones estricto (Git), solicitudes de extracción (*pull requests*) obligatorias y revisiones de código.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <h3>
+              <span class="lang-en">Full-Stack Project Developer (Internship)</span>
+              <span class="lang-es">Desarrollador de Proyecto Full-Stack (Prácticas)</span>
+            </h3>
+            <span class="company-name">Embrace-It</span>
+            <span class="timeline-date">
+              <span class="lang-en">May 2025</span>
+              <span class="lang-es">Mayo 2025</span>
+            </span>
+          </div>
+          <div class="timeline-content lang-en">
+            <p>
+              Full-stack project development using Angular and .NET as part of academic internships.
+            </p>
+            <ul>
+              <li>Hands-on training in web application architecture, APIs, and professional development workflows.</li>
+              <li>Use of version control tools and a collaborative development environment.</li>
+            </ul>
+          </div>
+          <div class="timeline-content lang-es">
+            <p>
+              Desarrollo de un proyecto full-stack utilizando Angular y .NET como parte de las prácticas curriculares.
+            </p>
+            <ul>
+              <li>Formación práctica en arquitectura de aplicaciones web, APIs y flujo de desarrollo profesional.</li>
+              <li>Uso de herramientas de control de versiones y entorno colaborativo de desarrollo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <h3>
+              <span class="lang-en">Customer Service & Trainer</span>
+              <span class="lang-es">Atención al Cliente y Formador</span>
+            </h3>
+            <span class="company-name">McDonald's — Gibraltar, United Kingdom</span>
+            <span class="timeline-date">
+              <span class="lang-en">August 2021 - September 2023</span>
+              <span class="lang-es">Agosto 2021 - Septiembre 2023</span>
+            </span>
+          </div>
+          <div class="timeline-content lang-en">
+            <p>
+              Customer service in Spanish and English in a high-pressure environment.
+            </p>
+            <ul>
+              <li>Responsible for training new employees, including schedule planning, performance monitoring, and continuous supervision.</li>
+              <li>Developed strong multitasking, communication, and team coordination capabilities.</li>
+            </ul>
+          </div>
+          <div class="timeline-content lang-es">
+            <p>
+              Atención al cliente en español e inglés en un entorno de alta presión.
+            </p>
+            <ul>
+              <li>Encargado de la formación de nuevos empleados: planificación de horarios, seguimiento del desempeño y supervisión continua.</li>
+              <li>Desarrollo de altas capacidades de multitarea, comunicación y coordinación de equipos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Project (Frametric) Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="lang-en">Featured Project</span>
+          <span class="lang-es">Proyecto Destacado</span>
+        </h2>
+        <div class="title-underline"></div>
+      </div>
+      
+      <div class="project-hero-card">
+        <div class="project-info">
+          <div class="project-badge">
+            <span class="lang-en">Featured Core Project</span>
+            <span class="lang-es">Proyecto Principal</span>
+          </div>
+          <h2>Frametric — Cinematic Analytics Engine</h2>
+          <p class="project-pitch lang-en">
+            Frametric is a modern cinematic data engine inspired by services like Letterboxd and Spotify Wrapped. It processes, normalizes, and enriches historical movie logs to generate deep analytics dashboards and micro-animated visual presentations.
+          </p>
+          <p class="project-pitch lang-es">
+            Frametric es un motor moderno de datos cinematográficos inspirado en servicios como Letterboxd y Spotify Wrapped. Procesa, normaliza y enriquece registros históricos de películas para generar paneles de analítica profunda y presentaciones visuales microanimadas.
+          </p>
+          
+          <div class="tech-stack-row">
+            <span>.NET 9</span>
+            <span>Angular 19</span>
+            <span>PostgreSQL</span>
+            <span>Dapper</span>
+            <span>EF Core</span>
+            <span>Playwright</span>
+          </div>
+        </div>
+        <div class="project-highlights">
+          <div class="highlight-item">
+            <span class="highlight-num">100%</span>
+            <span class="highlight-label">
+              <span class="lang-en">Decoupled Architecture</span>
+              <span class="lang-es">Arquitectura desacoplada</span>
+            </span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-num">45+</span>
+            <span class="highlight-label">
+              <span class="lang-en">E2E Playwright Tests</span>
+              <span class="lang-es">Pruebas E2E (Playwright)</span>
+            </span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-num">36</span>
+            <span class="highlight-label">
+              <span class="lang-en">Advanced Analytical Queries</span>
+              <span class="lang-es">Consultas analíticas</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Tabs -->
+      <div class="tab-container">
+        <div class="tab-headers">
+          <button class="tab-header active" onclick="switchTab(event, 'tab-architecture')">
+            <span class="lang-en">Architecture & Decoupling</span>
+            <span class="lang-es">Arquitectura y Desacoplamiento</span>
+          </button>
+          <button class="tab-header" onclick="switchTab(event, 'tab-db')">
+            <span class="lang-en">Database (EF Core / Dapper)</span>
+            <span class="lang-es">Base de datos (EF Core / Dapper)</span>
+          </button>
+          <button class="tab-header" onclick="switchTab(event, 'tab-bg')">
+            <span class="lang-en">Ingestion & Enrichment</span>
+            <span class="lang-es">Ingesta y Enriquecimiento</span>
+          </button>
+          <button class="tab-header" onclick="switchTab(event, 'tab-testing')">
+            <span class="lang-en">Validation & Testing</span>
+            <span class="lang-es">Validación y Pruebas</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: Architecture -->
+        <div id="tab-architecture" class="tab-content active">
+          <div class="lang-en">
+            <h3>Clean Architecture Boundaries</h3>
+            <p>
+              Frametric is structured as a **Modular Monolith** applying **Clean Architecture** patterns to prevent domain leakage. The business core remains completely decoupled from database engine models, third-party libraries, and file-parsing schemas:
+            </p>
+            <div class="architecture-grid">
+              <div class="arch-layer">
+                <h4>1. Core Domain</h4>
+                <p>Pure C# aggregates (`User`, `Movie`, `DiaryEntry`) containing business rules and zero external imports.</p>
+              </div>
+              <div class="arch-layer">
+                <h4>2. Application Layer</h4>
+                <p>Mediator CQRS handlers (`RegisterUserCommand`, `ImportLetterboxdArchiveCommand`) and interface abstractions.</p>
+              </div>
+              <div class="arch-layer">
+                <h4>3. Infrastructure</h4>
+                <p>Database context persistent configurations, custom CsvHelper stream mappers, and external TMDB client integrations.</p>
+              </div>
+              <div class="arch-layer">
+                <h4>4. API Layer</h4>
+                <p>Thin REST controllers securing requests via JWT policies and input-validating middleware.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lang-es">
+            <h3>Límites de Arquitectura Limpia</h3>
+            <p>
+              Frametric está estructurado como un **Monolito Modular** aplicando patrones de **Arquitectura Limpia** para evitar fugas de dominio. El núcleo de negocio permanece completamente desacoplado de los modelos de base de datos, bibliotecas de terceros y esquemas de análisis de archivos:
+            </p>
+            <div class="architecture-grid">
+              <div class="arch-layer">
+                <h4>1. Core Domain</h4>
+                <p>Agregados puros en C# (`User`, `Movie`, `DiaryEntry`) que contienen las reglas de negocio y cero dependencias externas.</p>
+              </div>
+              <div class="arch-layer">
+                <h4>2. Application Layer</h4>
+                <p>Manejadores Mediator CQRS (`RegisterUserCommand`, `ImportLetterboxdArchiveCommand`) y abstracciones de interfaces.</p>
+              </div>
+              <div class="arch-layer">
+                <h4>3. Infrastructure</h4>
+                <p>Persistencia de base de datos, mapeo de archivos csv con CsvHelper en flujo de memoria y cliente de API TMDB.</p>
+              </div>
+              <div class="arch-layer">
+                <h4>4. API Layer</h4>
+                <p>Controladores REST delgados con políticas JWT y middleware para validaciones de esquemas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Database -->
+        <div id="tab-db" class="tab-content">
+          <div class="lang-en">
+            <h3>Transactional & Analytical Hybrid Persistence</h3>
+            <p>
+              Mirroring industry best practices, the database layer combines Entity Framework Core and Dapper to optimize specific operations:
+            </p>
+            <ul>
+              <li><strong>EF Core (Write Path):</strong> Handles standard CRUD transactions, identity state tracking, database migrations, and complex relational updates (e.g., movie genre linkages).</li>
+              <li><strong>Dapper (Read/Analytics Path):</strong> Bypasses EF Core tracking overhead to execute highly optimized SQL queries (using CTEs and index parameters) for dashboard histograms and ranking aggregates.</li>
+              <li><strong>Strict PG Casting:</strong> Enforces explicit type casting (e.g., `CAST(COUNT(...) AS INTEGER)`) to map PostgreSQL variables accurately to immutable C# primary constructors.</li>
+            </ul>
+          </div>
+          <div class="lang-es">
+            <h3>Persistencia Híbrida Analítica y Transaccional</h3>
+            <p>
+              Reflejando las mejores prácticas de la industria, la capa de datos combina Entity Framework Core y Dapper para optimizar operaciones clave:
+            </p>
+            <ul>
+              <li><strong>EF Core (Escritura):</strong> Gestiona transacciones CRUD estándar, ciclo de identidad, migraciones y relaciones complejas (ej. asociación de géneros).</li>
+              <li><strong>Dapper (Lecturas/Analítica):</strong> Evita la carga de seguimiento de EF Core para ejecutar consultas SQL directas y altamente optimizadas (con CTEs y optimización de índices) para gráficos y métricas del dashboard.</li>
+              <li><strong>Casteo en Postgres:</strong> Implementa conversiones explícitas de tipos en las consultas (ej. `CAST(COUNT(...) AS INTEGER)`) para asegurar el mapeo correcto con constructores primarios de C# inmutables.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tab 3: Ingestion & Enrichment -->
+        <div id="tab-bg" class="tab-content">
+          <div class="lang-en">
+            <h3>System.Threading.Channels Pipeline</h3>
+            <p>
+              Bulk ZIP imports contain bare titles and years. The enrichment of genres, runtime minutes, and poster assets is decoupled to ensure fast response times:
+            </p>
+            <ol>
+              <li><strong>In-Memory Parsing:</strong> CsvHelper reads ZIP archive streams directly in memory without writing files to local disk.</li>
+              <li><strong>Asynchronous Signal:</strong> The import handler writes a lightweight wake-up signal to a `System.Threading.Channels.Channel`.</li>
+              <li><strong>Background Worker:</strong> A hosted `BackgroundService` reads from the channel and processes pending movies in batches of 20, incorporating a 10-second throttling delay to respect TMDB API rate limit policies.</li>
+            </ol>
+          </div>
+          <div class="lang-es">
+            <h3>Flujo asíncrono con System.Threading.Channels</h3>
+            <p>
+              La importación masiva de archivos ZIP contiene solo títulos y años. El enriquecimiento de metadatos (géneros, duración y posters) se desacopla para acelerar la respuesta de la API:
+            </p>
+            <ol>
+              <li><strong>Lectura en Memoria:</strong> CsvHelper procesa los flujos del archivo comprimido directamente en memoria sin escribir archivos temporales en disco.</li>
+              <li><strong>Señalización Asíncrona:</strong> El manejador de importación escribe un aviso ligero de activación en un `System.Threading.Channels.Channel`.</li>
+              <li><strong>Trabajador en Segundo Plano:</strong> Un `BackgroundService` hosted lee las señales del canal y procesa los enriquecimientos en lotes de 20 películas, respetando los límites de TMDB con pausas de 10 segundos.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Tab 4: Testing -->
+        <div id="tab-testing" class="tab-content">
+          <div class="lang-en">
+            <h3>Continuous Quality Assurance</h3>
+            <p>
+              To guarantee long-term maintenance and zero regressions, Frametric utilizes a multi-tiered automated testing framework:
+            </p>
+            <ul>
+              <li><strong>Backend Unit Tests (xUnit & Moq):</strong> Covers command validation handlers, ZIP structure anomalies (e.g., converting decimals to nullable years), and database persistence triggers.</li>
+              <li><strong>Frontend E2E Tests (Playwright):</strong> 45 automated test scenarios mapping routing guards, authorization redirects, stats query tables, and slideshow gesture keys across WebKit, Firefox, and Chromium.</li>
+            </ul>
+          </div>
+          <div class="lang-es">
+            <h3>Aseguramiento de Calidad Continuo</h3>
+            <p>
+              Para garantizar la mantenibilidad y prevenir regresiones, Frametric cuenta con un robusto sistema de pruebas automatizadas en múltiples niveles:
+            </p>
+            <ul>
+              <li><strong>Pruebas Unitarias de Backend (xUnit y Moq):</strong> Validaciones de comandos, gestión de inconsistencias en los ZIPs importados y lógica de guardado y persistencia en base de datos.</li>
+              <li><strong>Pruebas E2E en Frontend (Playwright):</strong> 45 escenarios interactivos simulando flujos reales de usuario, enrutamiento seguro, autenticación JWT, pantallas de estadísticas y vistas animadas en Chromium, WebKit y Firefox.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendations Section -->
+  <section id="recommendations" class="recommendations-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="lang-en">Recommendations</span>
+          <span class="lang-es">Recomendaciones</span>
+        </h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="recommendations-grid">
+        <div class="recommendation-card">
+          <div class="rec-quote-icon">“</div>
+          <p class="recommendation-text">
+            “Tuve la oportunidad de supervisar a Jesús Otero durante su periodo de prácticas como Backend Developer en Embrace-it, y su evolución durante este tiempo ha sido muy positiva. Jesús ha trabajado en el desarrollo de funcionalidades dentro de una API crítica que impacta en distintos proyectos importantes de la compañía, adaptándose rápidamente al entorno y al nivel técnico requerido. Durante las prácticas ha trabajado con tecnologías como .NET, Entity Framework Core, Dapper y Azure.”
+          </p>
+          <p class="recommendation-text font-italic">
+            “Destacaría especialmente su capacidad de aprendizaje y su actitud a la hora de afrontar nuevas tareas y tecnologías. También participó en tareas de investigación orientadas a optimizar la monitorización en Azure, mostrando iniciativa e interés por comprender tanto la parte funcional como técnica de las soluciones. Ha sido un placer trabajar con él durante esta etapa y estoy seguro de que seguirá creciendo profesionalmente en el ámbito del desarrollo backend.”
+          </p>
+          <div class="recommendation-author">
+            <span class="author-name">Pablo Navarro</span>
+            <span class="author-title">
+              <span class="lang-en">Developer, Embrace-It</span>
+              <span class="lang-es">Desarrollador, Embrace-It</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="recommendation-card">
+          <div class="rec-quote-icon">“</div>
+          <p class="recommendation-text">
+            “Quiero recomendar a Jesús Otero porque trabajar con él ha sido una experiencia muy positiva. Además de tener muy buenos conocimientos técnicos y desenvolverse muy bien programando, siempre ha demostrado compromiso, responsabilidad y una gran actitud para resolver problemas y ayudar al equipo. Es una persona proactiva, con muchas ganas de aprender y capaz de adaptarse rápidamente a nuevos desafíos.”
+          </p>
+          <p class="recommendation-text font-italic">
+            “Ha trabajado principalmente en el backend, desarrollando una API en .NET siguiendo buenas prácticas basadas en Clean Architecture. Además, participó en la migración de una de las APIs principales del proyecto, pasando del uso de Entity Framework Core a Dapper, con muy buenos resultados. Jesús también ha formado parte del equipo de plataforma, donde gestionamos servicios centralizados consumidos por varias aplicaciones de la compañía. Esto implica una gran responsabilidad, ya que cualquier incidencia puede afectar a múltiples proyectos, y ha sabido estar a la altura tanto a nivel técnico como profesional, demostrando seguridad, implicación y capacidad para trabajar en entornos críticos.”
+          </p>
+          <div class="recommendation-author">
+            <span class="author-name">Pablo Navarro</span>
+            <span class="author-title">
+              <span class="lang-en">Developer, Embrace-It (Detailed Evaluation)</span>
+              <span class="lang-es">Desarrollador, Embrace-It (Evaluación Detallada)</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Jesús J. Otero Martínez. <span class="lang-en">All rights reserved.</span><span class="lang-es">Todos los derechos reservados.</span></p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/jesus-otero-dev" target="_blank">LinkedIn</a>
+        <a href="mailto:jesusoteromartinez@outlook.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactivity Script -->
+  <script>
+    function toggleLanguage() {
+      const body = document.body;
+      const btn = document.getElementById("langBtn");
+      if (body.classList.contains("lang-en")) {
+        body.classList.remove("lang-en");
+        body.classList.add("lang-es");
+        btn.textContent = "EN";
+      } else {
+        body.classList.remove("lang-es");
+        body.classList.add("lang-en");
+        btn.textContent = "ES";
+      }
+    }
+
+    function switchTab(evt, tabId) {
+      // Get all elements with class="tab-content" and hide them
+      const tabContents = document.getElementsByClassName("tab-content");
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+      }
+
+      // Get all elements with class="tab-header" and remove the class "active"
+      const tabHeaders = document.getElementsByClassName("tab-header");
+      for (let i = 0; i < tabHeaders.length; i++) {
+        tabHeaders[i].classList.remove("active");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabId).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+</html>
