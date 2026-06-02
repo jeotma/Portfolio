@@ -748,11 +748,22 @@ section {
   padding-top: 1.5rem;
 }
 
+.author-link {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+.author-link:hover .author-name {
+  color: var(--primary);
+}
+
 .author-name {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.1rem;
   color: var(--text-white);
+  transition: var(--transition);
 }
 
 .author-title {
