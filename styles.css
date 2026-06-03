@@ -233,10 +233,13 @@ h1, h2, h3, h4 {
   display: flex;
   gap: 1rem;
   margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   padding: 0.8rem 1.8rem;
   border-radius: 8px;
@@ -265,6 +268,61 @@ h1, h2, h3, h4 {
 .btn-secondary:hover {
   background: rgba(255,255,255,0.03);
   border-color: var(--text-muted);
+  transform: translateY(-2px);
+}
+
+.btn-tertiary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.btn-tertiary:hover {
+  background: rgba(34, 211, 238, 0.04);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Availability Status Badge */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #10b981;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+.pulse-dot::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: pulse-ring 1.8s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.9; }
+  100% { transform: scale(2.8); opacity: 0; }
 }
 
 .contact-links {
@@ -398,11 +456,33 @@ section {
   border-radius: 16px;
   transition: var(--transition);
   box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category-card.core-skills {
+  border-color: rgba(82, 116, 255, 0.3);
+  box-shadow: 0 4px 25px rgba(82, 116, 255, 0.05);
+}
+
+.skill-category-card.core-skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary), var(--accent));
 }
 
 .skill-category-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary);
+}
+
+.skill-category-card.core-skills:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(82, 116, 255, 0.15);
 }
 
 .category-icon {
@@ -415,6 +495,11 @@ section {
   justify-content: center;
   margin-bottom: 1.5rem;
   color: var(--primary);
+}
+
+.core-skills .category-icon {
+  background: linear-gradient(135deg, rgba(82, 116, 255, 0.2), rgba(34, 211, 238, 0.2));
+  color: var(--accent);
 }
 
 .category-icon .icon {
@@ -444,10 +529,24 @@ section {
   transition: var(--transition);
 }
 
-.skill-chip:hover {
+.skill-chip.core {
   background: rgba(82, 116, 255, 0.08);
+  border-color: rgba(82, 116, 255, 0.3);
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.skill-chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-white);
+  border-color: var(--text-muted);
+}
+
+.skill-chip.core:hover {
+  background: var(--primary);
   color: var(--text-white);
   border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(82, 116, 255, 0.3);
 }
 
 /* Experience Timeline */
