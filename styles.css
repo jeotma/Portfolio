@@ -614,8 +614,20 @@ section {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .gallery-item {
@@ -756,8 +768,14 @@ section {
 /* Recommendations */
 .recommendations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .recommendation-card {
