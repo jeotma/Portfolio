@@ -433,6 +433,7 @@
           <span class="lang-es">Galería de Interfaces de la Aplicación</span>
         </h3>
         <div class="gallery-grid">
+          <!-- 1. Landing (Login previo) -->
           <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
             <img src="images/landing.jpg" alt="Frametric Landing Page" class="gallery-img">
             <div class="gallery-caption">
@@ -440,13 +441,7 @@
               <span class="lang-es">Página de Inicio y Presentación Cinemática</span>
             </div>
           </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
-            <img src="images/final-cut-intro.png" alt="The Final Cut Intro" class="gallery-img">
-            <div class="gallery-caption">
-              <span class="lang-en">"The Final Cut" Year-in-Review Entrance</span>
-              <span class="lang-es">Entrada a la Presentación Anual "The Final Cut"</span>
-            </div>
-          </div>
+          <!-- 2. Dashboard -->
           <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
             <img src="images/dashboard.png" alt="Analytics Dashboard" class="gallery-img">
             <div class="gallery-caption">
@@ -454,6 +449,7 @@
               <span class="lang-es">Panel de Control Principal e Indicadores Clave</span>
             </div>
           </div>
+          <!-- 3. Import Center -->
           <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
             <img src="images/imports.png" alt="Import Center" class="gallery-img">
             <div class="gallery-caption">
@@ -461,34 +457,7 @@
               <span class="lang-es">Gestor de Importaciones e Historial de Cargas ZIP</span>
             </div>
           </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
-            <img src="images/stats-hero.png" alt="Statistics Workspace" class="gallery-img">
-            <div class="gallery-caption">
-              <span class="lang-en">Advanced Statistics & Filtering Workspace</span>
-              <span class="lang-es">Panel de Estadísticas Avanzadas y Filtros</span>
-            </div>
-          </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
-            <img src="images/stats-chart.png" alt="Watch Habits Chart" class="gallery-img">
-            <div class="gallery-caption">
-              <span class="lang-en">Interactive Watch Habits & Correlation Charts</span>
-              <span class="lang-es">Gráficos Interactivos de Hábitos de Visualización</span>
-            </div>
-          </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
-            <img src="images/wrapped.png" alt="The Final Cut Wrapped" class="gallery-img">
-            <div class="gallery-caption">
-              <span class="lang-en">"The Final Cut" Interactive Summary & Favorites Card</span>
-              <span class="lang-es">Resumen Interactivo y Tarjeta de Favoritos "The Final Cut"</span>
-            </div>
-          </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
-            <img src="images/stats-movies.png" alt="Movie Log Table" class="gallery-img">
-            <div class="gallery-caption">
-              <span class="lang-en">Searchable & Sortable Historical Log Table</span>
-              <span class="lang-es">Historial Completo de Películas con Filtros y Ordenación</span>
-            </div>
-          </div>
+          <!-- 4. Final Cut - Teaser -->
           <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
             <img src="images/final-cut-teaser.png" alt="Final Cut Teaser" class="gallery-img">
             <div class="gallery-caption">
@@ -496,6 +465,15 @@
               <span class="lang-es">Avance de Presentación Interactiva "The Final Cut"</span>
             </div>
           </div>
+          <!-- 5. Final Cut - Intro (Slide 0) -->
+          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
+            <img src="images/final-cut-intro.png" alt="The Final Cut Intro" class="gallery-img">
+            <div class="gallery-caption">
+              <span class="lang-en">"The Final Cut" Year-in-Review Entrance</span>
+              <span class="lang-es">Entrada a la Presentación Anual "The Final Cut"</span>
+            </div>
+          </div>
+          <!-- 6. Final Cut - Big Numbers (Slide 1) -->
           <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
             <img src="images/final-cut-big-numbers.png" alt="Global Watch Volume" class="gallery-img">
             <div class="gallery-caption">
@@ -503,6 +481,15 @@
               <span class="lang-es">Hitos de Consumo y Estadísticas Globales</span>
             </div>
           </div>
+          <!-- 7. Final Cut - Prime Time (Slide 2) -->
+          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
+            <img src="images/final-cut-prime-time.png" alt="Prime Watch Times" class="gallery-img">
+            <div class="gallery-caption">
+              <span class="lang-en">Activity & Watch Habits Calendar Metrics</span>
+              <span class="lang-es">Estadísticas Calendario de Hábitos y Picos de Consumo</span>
+            </div>
+          </div>
+          <!-- 8. Final Cut - Genres (Slide 5) -->
           <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
             <img src="images/final-cut-genres.png" alt="Cinematic Genre Distribution" class="gallery-img">
             <div class="gallery-caption">
@@ -510,11 +497,60 @@
               <span class="lang-es">Distribución y Preferencia de Géneros Cinemáticos</span>
             </div>
           </div>
+          <!-- 9. Final Cut - Generations (Slide 10) -->
+          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
+            <img src="images/final-cut-generations.png" alt="Generational Divide" class="gallery-img">
+            <div class="gallery-caption">
+              <span class="lang-en">Classic vs Modern Movie Decades Distribution</span>
+              <span class="lang-es">Análisis Generacional y Distribución de Décadas</span>
+            </div>
+          </div>
+          <!-- 10. Final Cut - Bookends (Slide 14) -->
           <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
             <img src="images/final-cut-bookends.png" alt="Year Bookends" class="gallery-img">
             <div class="gallery-caption">
               <span class="lang-en">Year-in-Review Bookend Milestones</span>
               <span class="lang-es">Resumen de Apertura y Cierre de Año (Bookends)</span>
+            </div>
+          </div>
+          <!-- 11. Final Cut - Return of the King (Slide 17) -->
+          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
+            <img src="images/final-cut-king.png" alt="Most Rewatched Film" class="gallery-img">
+            <div class="gallery-caption">
+              <span class="lang-en">"Return of the King" Obsessive Rewatch Spotlight</span>
+              <span class="lang-es">Premio "Return of the King" a la Película Más Repetida</span>
+            </div>
+          </div>
+          <!-- 12. Final Cut - Hall of Fame (Slide 18) -->
+          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
+            <img src="images/final-cut-hall-of-fame.png" alt="Hall of Fame Slide" class="gallery-img">
+            <div class="gallery-caption">
+              <span class="lang-en">"The Hall of Fame" High-Performance Analytical Rankings</span>
+              <span class="lang-es">Panel de Clasificaciones de Honor y Películas Destacadas</span>
+            </div>
+          </div>
+          <!-- 13. Stats - Hero Card -->
+          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
+            <img src="images/stats-hero.png" alt="Statistics Workspace" class="gallery-img">
+            <div class="gallery-caption">
+              <span class="lang-en">Advanced Statistics & Filtering Workspace</span>
+              <span class="lang-es">Panel de Estadísticas Avanzadas y Filtros</span>
+            </div>
+          </div>
+          <!-- 14. Stats - Chart -->
+          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
+            <img src="images/stats-chart.png" alt="Watch Habits Chart" class="gallery-img">
+            <div class="gallery-caption">
+              <span class="lang-en">Interactive Watch Habits & Correlation Charts</span>
+              <span class="lang-es">Gráficos Interactivos de Hábitos de Visualización</span>
+            </div>
+          </div>
+          <!-- 15. Stats - Movies Table -->
+          <div class="gallery-item" onclick="openLightbox(this.querySelector('.gallery-img'))">
+            <img src="images/stats-movies.png" alt="Movie Log Table" class="gallery-img">
+            <div class="gallery-caption">
+              <span class="lang-en">Searchable & Sortable Historical Log Table</span>
+              <span class="lang-es">Historial Completo de Películas con Filtros y Ordenación</span>
             </div>
           </div>
         </div>
