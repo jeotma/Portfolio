@@ -135,10 +135,10 @@
             Soy un ingeniero de software enfocado en la construcción de sistemas web robustos y de alto rendimiento. Mi experiencia clave se centra en la arquitectura backend, optimización de bases de datos e integración cloud. Me especializo en escribir código C# y .NET limpio y bien probado, adaptándome rápidamente a bases de código complejas y colaborando con equipos multidisciplinares para resolver cuellos de botella de rendimiento bajo alta carga de producción.
           </p>
           <p class="lang-en">
-            During my professional internships, I developed core backend features for high-traffic corporate APIs and helped optimize cloud monitoring telemetry in Microsoft Azure. I specialized in service performance—specifically migrating legacy Entity Framework queries to Dapper to resolve critical database bottlenecks, <strong>achieving a 40% reduction in query response times</strong>. I apply this same architectural discipline and focus on performance to all my independent projects, ensuring high test coverage and strict decoupled boundaries.
+            During my professional internships, I developed core backend features for high-traffic corporate APIs and helped optimize cloud monitoring telemetry in Microsoft Azure. I specialized in service performance—specifically migrating legacy Entity Framework queries to Dapper to resolve critical database bottlenecks, <strong>achieving a remarkable reduction in query response times</strong>. I apply this same architectural discipline and focus on performance to all my independent projects, ensuring high test coverage and strict decoupled boundaries.
           </p>
           <p class="lang-es">
-            Durante mis prácticas profesionales, desarrollé funcionalidades backend principales para APIs corporativas de alto tráfico y optimicé la telemetría en Microsoft Azure. Me especialicé en el rendimiento de servicios, concretamente migrando consultas heredadas de Entity Framework a Dapper para solucionar cuellos de botella de bases de datos críticos, <strong>consiguiendo una reducción del 40% en los tiempos de respuesta</strong>. Aplico esta misma disciplina arquitectónica y enfoque de rendimiento en todos mis proyectos independientes, asegurando una alta cobertura de pruebas y límites estrictamente desacoplados.
+            Durante mis prácticas profesionales, desarrollé funcionalidades backend principales para APIs corporativas de alto tráfico y optimicé la telemetría en Microsoft Azure. Me especialicé en el rendimiento de servicios, concretamente migrando consultas heredadas de Entity Framework a Dapper para solucionar cuellos de botella de bases de datos críticos, <strong>consiguiendo una reducción notable en los tiempos de respuesta</strong>. Aplico esta misma disciplina arquitectónica y enfoque de rendimiento en todos mis proyectos independientes, asegurando una alta cobertura de pruebas y límites estrictamente desacoplados.
           </p>
         </div>
         <div class="about-metadata">
@@ -932,6 +932,16 @@
       const modal = document.getElementById("lightboxModal");
       modal.classList.remove("show");
     }
+
+    // Scroll opacity adjustment for floating-nav
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.floating-nav');
+      if (window.scrollY > 80) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
   </script>
 
   <!-- Lightbox Modal -->

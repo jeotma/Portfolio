@@ -76,6 +76,17 @@ h1, h2, h3, h4 {
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.floating-nav.scrolled {
+  opacity: 0.15;
+  transform: translateY(-5px);
+}
+
+.floating-nav.scrolled:hover {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .nav-container {
@@ -90,6 +101,12 @@ h1, h2, h3, h4 {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: var(--transition);
+}
+
+.floating-nav.scrolled:hover .nav-container {
+  box-shadow: 0 15px 35px rgba(82, 116, 255, 0.15);
+  border-color: rgba(82, 116, 255, 0.2);
 }
 
 .nav-brand {
@@ -240,7 +257,7 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 0.8rem 1.8rem;
   border-radius: 8px;
   font-weight: 600;
@@ -248,20 +265,21 @@ h1, h2, h3, h4 {
   font-size: 0.95rem;
 }
 
-.btn-primary {
+.btn-primary, .btn-primary:visited, .btn-primary:link {
   background: var(--primary);
-  color: var(--text-white);
+  color: var(--text-white) !important;
   border: 1px solid var(--primary);
 }
 
 .btn-primary:hover {
   box-shadow: 0 10px 20px var(--primary-glow);
   transform: translateY(-2px);
+  color: var(--text-white) !important;
 }
 
-.btn-secondary {
+.btn-secondary, .btn-secondary:visited, .btn-secondary:link {
   background: transparent;
-  color: var(--text-white);
+  color: var(--text-white) !important;
   border: 1px solid var(--border-color);
 }
 
@@ -269,18 +287,22 @@ h1, h2, h3, h4 {
   background: rgba(255,255,255,0.03);
   border-color: var(--text-muted);
   transform: translateY(-2px);
+  color: var(--text-white) !important;
 }
 
-.btn-tertiary {
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid rgba(34, 211, 238, 0.2);
+.btn-tertiary, .btn-tertiary:visited, .btn-tertiary:link {
+  background: rgba(34, 211, 238, 0.03) !important;
+  color: var(--accent) !important;
+  border: 1px solid rgba(34, 211, 238, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.05);
 }
 
 .btn-tertiary:hover {
-  background: rgba(34, 211, 238, 0.04);
-  border-color: var(--accent);
+  background: rgba(34, 211, 238, 0.1) !important;
+  border-color: var(--accent) !important;
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34, 211, 238, 0.2);
+  color: var(--accent) !important;
 }
 
 /* Availability Status Badge */
@@ -288,14 +310,26 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: rgba(16, 185, 129, 0.08);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  padding: 0.4rem 1rem;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #10b981;
-  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.04) 100%) !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 30px !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.12);
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.availability-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.5) !important;
+}
+
+.availability-badge span {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: #10b981 !important;
   font-family: var(--font-heading);
 }
 
@@ -306,6 +340,7 @@ h1, h2, h3, h4 {
   border-radius: 50%;
   position: relative;
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .pulse-dot::after {
@@ -992,6 +1027,17 @@ section {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes cardEntrance {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes coreGlow {
+  0% { box-shadow: 0 4px 25px rgba(82, 116, 255, 0.05), 0 0 0 rgba(82, 116, 255, 0); }
+  50% { box-shadow: 0 4px 35px rgba(82, 116, 255, 0.15), 0 0 15px rgba(82, 116, 255, 0.08); }
+  100% { box-shadow: 0 4px 25px rgba(82, 116, 255, 0.05), 0 0 0 rgba(82, 116, 255, 0); }
+}
+
 .animate-fade-up {
   animation: fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -1001,6 +1047,54 @@ section {
 .animate-fade-up:nth-child(4) { animation-delay: 0.3s; }
 .animate-fade-up:nth-child(5) { animation-delay: 0.4s; }
 .animate-fade-up:nth-child(6) { animation-delay: 0.5s; }
+
+/* Staggered Entrance Animations for Cards */
+.meta-card, .skill-category-card, .recommendation-card, .project-hero-card, .gallery-item {
+  animation: cardEntrance 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+.about-metadata .meta-card:nth-child(1) { animation-delay: 0.1s; }
+.about-metadata .meta-card:nth-child(2) { animation-delay: 0.2s; }
+.about-metadata .meta-card:nth-child(3) { animation-delay: 0.3s; }
+
+.skills-grid .skill-category-card:nth-child(1) { animation-delay: 0.1s; }
+.skills-grid .skill-category-card:nth-child(2) { animation-delay: 0.2s; }
+.skills-grid .skill-category-card:nth-child(3) { animation-delay: 0.3s; }
+
+.skill-category-card.core-skills {
+  animation: cardEntrance 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both, coreGlow 4s ease-in-out infinite;
+}
+
+.recommendations-grid .recommendation-card:nth-child(1) { animation-delay: 0.15s; }
+.recommendations-grid .recommendation-card:nth-child(2) { animation-delay: 0.3s; }
+
+.showcase-gallery .gallery-item {
+  animation-duration: 0.6s;
+}
+.showcase-gallery .gallery-item:nth-child(3n+1) { animation-delay: 0.1s; }
+.showcase-gallery .gallery-item:nth-child(3n+2) { animation-delay: 0.2s; }
+.showcase-gallery .gallery-item:nth-child(3n) { animation-delay: 0.3s; }
+
+/* Interactive Hover Scales */
+.lang-btn {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+}
+.lang-btn:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.print-btn {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
+}
+.print-btn:hover {
+  transform: translateY(-2px);
+}
+.print-btn:hover .print-icon {
+  transform: scale(1.1) translateY(-1px);
+}
+.print-icon {
+  transition: transform 0.3s ease;
+}
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
