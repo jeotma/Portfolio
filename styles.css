@@ -30,6 +30,11 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: var(--bg-dark);
   color: var(--text-main);
@@ -1097,15 +1102,7 @@ section {
   transition: transform 0.3s ease;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .hero-title { font-size: 2.75rem; }
-  .about-content { grid-template-columns: 1fr; gap: 2rem; }
-  .project-hero-card { grid-template-columns: 1fr; gap: 2rem; }
-  .tab-headers { flex-wrap: wrap; }
-  .tab-header { flex: auto; width: 50%; }
-  .footer-container { flex-direction: column; gap: 1rem; text-align: center; }
-}
+/* Responsive adjustments are now declared at the bottom of this file to prevent source-order override issues. */
 
 /* ==========================================================================
    Print / PDF Optimization Stylesheet (Perfect CV Layout)
@@ -1463,12 +1460,7 @@ section {
   margin-bottom: 3.5rem;
 }
 
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
+/* Contact-grid mobile rules moved to consolidated media queries at the bottom of the file */
 
 .contact-card-item {
   background: rgba(255, 255, 255, 0.02);
@@ -1550,5 +1542,182 @@ section {
 
 .download-cv-btn:hover .download-icon {
   transform: translateY(2px);
+}
+
+/* ==========================================================================
+   Responsive Mobile & Tablet Overrides
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .hero-title { font-size: 2.75rem; }
+  .about-content { grid-template-columns: 1fr; gap: 2rem; }
+  .project-hero-card { grid-template-columns: 1fr; gap: 2rem; }
+  .tab-headers { flex-wrap: wrap; }
+  .tab-header { flex: auto; width: 50%; }
+  .footer-container { flex-direction: column; gap: 1rem; text-align: center; }
+}
+
+@media (max-width: 768px) {
+  /* Navigation */
+  .floating-nav {
+    top: 0.5rem;
+    left: 1rem;
+    right: 1rem;
+  }
+  .nav-container {
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  .nav-brand {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .nav-links {
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 6px;
+    gap: 1.25rem;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+  .print-btn {
+    display: none !important;
+  }
+  .nav-actions {
+    justify-content: center;
+  }
+
+  /* Layout spacing and overflow prevention */
+  .container {
+    padding: 0 1.25rem;
+  }
+  section {
+    padding: 4rem 0;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  
+  /* Hero */
+  .hero-section {
+    padding-top: 8rem;
+    min-height: auto;
+    padding-bottom: 4rem;
+    overflow: hidden;
+  }
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .hero-tagline {
+    font-size: 1.35rem;
+  }
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  .hero-cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .contact-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Project Tabs */
+  .tab-headers {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start;
+  }
+  .tab-headers::-webkit-scrollbar {
+    display: none;
+  }
+  .tab-header {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 0.85rem;
+  }
+  .tab-content {
+    padding: 1.5rem;
+  }
+
+  /* Project Hero Card */
+  .project-hero-card {
+    padding: 1.5rem;
+  }
+
+  /* Recommendations */
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .recommendation-card {
+    padding: 2.5rem 1.5rem;
+  }
+  .rec-quote-icon {
+    font-size: 4rem;
+    top: 0.5rem;
+    left: 1rem;
+  }
+
+  /* Contact & CV Download Section */
+  .contact-card {
+    padding: 2.5rem 1.25rem;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .cv-download-zone {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 1rem;
+  }
+  .download-cv-btn {
+    width: 100% !important;
+    min-width: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .hero-tagline {
+    font-size: 1.15rem;
+  }
+  .availability-badge {
+    padding: 0.4rem 0.8rem !important;
+  }
+  .availability-badge span {
+    font-size: 0.75rem !important;
+  }
+  .about-metadata {
+    gap: 1.5rem;
+  }
+  .meta-card {
+    padding: 1.25rem;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .skill-category-card {
+    padding: 1.5rem;
+  }
 }
 
