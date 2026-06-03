@@ -1239,3 +1239,122 @@ section {
   transform: scale(1.04);
   filter: brightness(1.1);
 }
+
+/* Contact Section styling */
+.contact-section {
+  padding: 8rem 0;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  backdrop-filter: blur(16px);
+}
+
+.contact-pitch {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.contact-card-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.contact-card-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  background: rgba(82, 116, 255, 0.04);
+  box-shadow: 0 10px 25px rgba(82, 116, 255, 0.08);
+}
+
+.contact-card-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(82, 116, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.contact-card-item:hover .contact-card-icon {
+  background: var(--primary);
+  color: var(--text-white);
+  transform: scale(1.1);
+}
+
+.contact-card-icon .icon {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-card-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  color: var(--text-white);
+}
+
+.contact-card-item p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+.cv-download-zone {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.download-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 240px;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.download-cv-btn .download-icon {
+  transition: transform 0.3s ease;
+}
+
+.download-cv-btn:hover .download-icon {
+  transform: translateY(2px);
+}
+
