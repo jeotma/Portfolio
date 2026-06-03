@@ -1595,6 +1595,9 @@ section {
   .nav-actions {
     justify-content: center;
   }
+  .lang-btn:hover {
+    transform: none !important;
+  }
 
   /* Layout spacing and overflow prevention */
   .container {

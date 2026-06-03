@@ -129,10 +129,10 @@
       <div class="about-content">
         <div class="about-text">
           <p class="lang-en">
-            I am a software engineer focused on building robust, high-performance web systems. My expertise lies in backend architecture, database optimization, and cloud integration. I specialize in writing clean, well-tested C# and .NET code, adapting quickly to complex legacy codebases, and collaborating with cross-functional teams to solve performance bottlenecks under heavy production loads.
+            I am a software developer focused on building robust, high-performance web systems. My expertise lies in backend architecture, database optimization, and cloud integration. I specialize in writing clean, well-tested C# and .NET code, adapting quickly to complex legacy codebases, and collaborating with cross-functional teams to solve performance bottlenecks under heavy production loads.
           </p>
           <p class="lang-es">
-            Soy un ingeniero de software enfocado en la construcción de sistemas web robustos y de alto rendimiento. Mi experiencia clave se centra en la arquitectura backend, optimización de bases de datos e integración cloud. Me especializo en escribir código C# y .NET limpio y bien probado, adaptándome rápidamente a bases de código complejas y colaborando con equipos multidisciplinares para resolver cuellos de botella de rendimiento bajo alta carga de producción.
+            Soy un desarrollador de software enfocado en la construcción de sistemas web robustos y de alto rendimiento. Mi experiencia clave se centra en la arquitectura backend, optimización de bases de datos e integración cloud. Me especializo en escribir código C# y .NET limpio y bien probado, adaptándome rápidamente a bases de código complejas y colaborando con equipos multidisciplinares para resolver cuellos de botella de rendimiento bajo alta carga de producción.
           </p>
           <p class="lang-en">
             During my professional internships, I developed core backend features for high-traffic corporate APIs and helped optimize cloud monitoring telemetry in Microsoft Azure. I specialized in service performance—specifically migrating legacy Entity Framework queries to Dapper to resolve critical database bottlenecks, <strong>achieving a remarkable reduction in query response times</strong>. I apply this same architectural discipline and focus on performance to all my independent projects, ensuring high test coverage and strict decoupled boundaries.
@@ -292,10 +292,10 @@
               Participación en el desarrollo y mantenimiento de soluciones backend dentro de un equipo vital para la empresa.
             </p>
             <ul>
-              <li><strong>Optimización de Rendimiento:</strong> Lideré la migración de consultas de lectura complejas de Entity Framework Core a Dapper, resolviendo cuellos de botella de latencia de base de datos.</li>
-              <li><strong>Optimización Cloud:</strong> Investigué y optimicé los servicios de monitorización y configuraciones de base de datos en Microsoft Azure.</li>
+              <li><strong>Optimización de rendimiento:</strong> Lideré la migración de consultas de lectura complejas de Entity Framework Core a Dapper, resolviendo cuellos de botella de latencia de base de datos.</li>
+              <li><strong>Optimización en la nube:</strong> Investigué y optimicé los servicios de monitorización y configuraciones de base de datos en Microsoft Azure.</li>
               <li><strong>Desarrollo de APIs:</strong> Colaboración en proyectos .NET trabajando con arquitecturas orientadas a APIs y servicios siguiendo guías de arquitectura limpia.</li>
-              <li><strong>Flujos de Trabajo:</strong> Uso de flujo de trabajo colaborativo con control de versiones estricto (Git), pull requests obligatorias y revisiones de código.</li>
+              <li><strong>Flujos de trabajo:</strong> Uso de flujo de trabajo colaborativo con control de versiones estricto (Git), pull requests obligatorias y revisiones de código.</li>
             </ul>
           </div>
         </div>
@@ -614,9 +614,9 @@
             </div>
           </div>
           <div class="lang-es">
-            <h3>Límites de arquitectura limpia</h3>
+            <h3>Pautas de Clean Architecture</h3>
             <p>
-              Frametric está estructurado como un <strong>Monolito Modular</strong> aplicando patrones de <strong>Arquitectura Limpia</strong> para evitar fugas de dominio. El núcleo de negocio permanece completamente desacoplado de los modelos de base de datos, bibliotecas de terceros y esquemas de análisis de archivos:
+              Frametric está estructurado como un <strong>Monolito Modular</strong> aplicando patrones de <strong>Clean Architecture</strong> para evitar fugas de dominio. El núcleo de negocio permanece completamente desacoplado de los modelos de base de datos, bibliotecas de terceros y esquemas de análisis de archivos:
             </p>
             <div class="architecture-grid">
               <div class="arch-layer">
@@ -625,7 +625,7 @@
               </div>
               <div class="arch-layer">
                 <h4>2. Application Layer</h4>
-                <p>Manejadores Mediator CQRS y abstracciones de interfaces.</p>
+                <p>Mediator CQRS y abstracciones de interfaces.</p>
               </div>
               <div class="arch-layer">
                 <h4>3. Infrastructure</h4>
@@ -658,8 +658,8 @@
               Reflejando las mejores prácticas de la industria, la capa de datos combina Entity Framework Core y Dapper para optimizar operaciones clave:
             </p>
             <ul>
-              <li><strong>EF Core (Escritura):</strong> Gestiona transacciones CRUD estándar, ciclo de identidad, migraciones y relaciones complejas (ej. asociación de géneros).</li>
-              <li><strong>Dapper (Lecturas/Analítica):</strong> Evita la carga de seguimiento de EF Core para ejecutar consultas SQL directas y altamente optimizadas (con CTEs y optimización de índices) para gráficos y métricas del dashboard.</li>
+              <li><strong>EF Core (escritura):</strong> Gestiona transacciones CRUD estándar, ciclo de identidad, migraciones y relaciones complejas (ej. asociación de géneros).</li>
+              <li><strong>Dapper (lecturas/analítica):</strong> Evita la carga de seguimiento de EF Core para ejecutar consultas SQL directas y altamente optimizadas (con CTEs y optimización de índices) para gráficos y métricas del dashboard.</li>
               <li><strong>Casteo en Postgres:</strong> Implementa conversiones explícitas de tipos en las consultas (ej. `CAST(COUNT(...) AS INTEGER)`) para asegurar el mapeo correcto con constructores primarios de C# inmutables.</li>
             </ul>
           </div>
