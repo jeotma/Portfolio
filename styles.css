@@ -590,6 +590,102 @@ section {
   box-shadow: 0 4px 12px rgba(82, 116, 255, 0.3);
 }
 
+/* Highlights Section */
+.highlights-section {
+  padding: 6rem 0 3rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.highlight-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2.25rem 2rem;
+  border-radius: 16px;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  animation: cardEntrance 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+.highlights-grid .highlight-card:nth-child(1) { animation-delay: 0.1s; }
+.highlights-grid .highlight-card:nth-child(2) { animation-delay: 0.2s; }
+.highlights-grid .highlight-card:nth-child(3) { animation-delay: 0.3s; }
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 30px rgba(82, 116, 255, 0.15);
+}
+
+.highlight-icon-wrapper {
+  background: rgba(82, 116, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.highlight-card:hover .highlight-icon-wrapper {
+  background: var(--primary);
+  color: var(--text-white);
+  box-shadow: 0 4px 12px rgba(82, 116, 255, 0.3);
+}
+
+.highlight-card-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.highlight-card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+.highlight-card-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.highlight-card-content p strong {
+  color: var(--text-white);
+  font-weight: 600;
+}
+
+/* Binary Skills Grid Override */
+.skills-grid.binary-skills {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .skills-grid.binary-skills {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 /* Experience Timeline */
 .timeline {
   position: relative;
