@@ -815,6 +815,55 @@ section {
   line-height: 1.4;
 }
 
+/* Gallery See More Toggle */
+.gallery-toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+#galleryToggleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-white);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#galleryToggleBtn:hover {
+  border-color: var(--primary);
+  background: rgba(82, 116, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(82, 116, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+#galleryToggleBtn .toggle-icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid:not(.expanded) .gallery-item.hidden-item {
+  display: none !important;
+}
+
+.gallery-grid.expanded .gallery-item.hidden-item {
+  display: block !important;
+  animation: fadeIn 0.4s ease both;
+}
+
+.gallery-grid.expanded + .gallery-toggle-container .toggle-icon {
+  transform: rotate(180deg);
+}
+
 /* Tabs System */
 .tab-container {
   background: var(--bg-card);
